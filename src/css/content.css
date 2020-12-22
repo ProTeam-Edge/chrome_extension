@@ -1,0 +1,253 @@
+
+	/* overlay */
+
+		#proteamedge_overlay {
+
+			position: fixed;
+			z-index: 999999999;
+
+			display: none;
+			justify-content: center;
+			align-items: center;
+
+			top: 0px;
+			left: 0px;
+			width: 100%;
+			height: 100%;
+
+			background-color: rgba( 0, 0, 0, 0.6 );
+
+		}
+
+		#proteamedge_overlay.active {
+
+			display: flex;
+
+		}
+
+		#proteamedge_overlay_iframe_wrap {
+
+			position: relative;
+			overflow: hidden;
+
+			width: calc( 100% - 100px );
+			height: calc( 100% - 100px );
+
+			border-radius: 2px;
+			box-shadow: rgba(0, 0, 0, 0.12) 0px 0px 2px 0px, rgba(0, 0, 0, 0.24) 0px 2px 2px 0px;
+
+		}
+
+		#proteamedge_overlay_iframe_wrap iframe {
+
+			display: block;
+
+			width: 100%;
+			height: 100%;
+
+			background-color: white;
+			border: none;
+
+		}
+
+		#proteamedge_overlay_close_button {
+
+			position: absolute;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			top: calc( 50px - 12px );
+			right: calc( 50px - 12px );
+			height: 24px;
+			width: 24px;
+
+			border-radius: 100px;
+			background-color: white;
+			cursor: pointer;
+			box-shadow: rgba(0, 0, 0, 0.12) 0px 0px 2px 0px, rgba(0, 0, 0, 0.24) 0px 2px 2px 0px;
+
+		}
+
+		#proteamedge_overlay_close_button>svg {
+
+			height: 21px;
+			width: 21px;
+
+			fill: rgba( 0, 0, 0, 0.8 );
+
+		}
+
+	/**/
+
+	/* gmail */
+
+		/* attachment button */
+
+			.proteamedge_attachment_button {
+
+/*				background-color: #f7ba07 !important;
+				border-color: rgba( 0, 0, 0, 0.1 ) !important;*/
+
+			}
+
+			.proteamedge_attachment_button:hover {
+
+				background-color: #313131 !important;
+
+			}
+
+			.proteamedge_attachment_button>img {
+
+				height: 16px;
+				width: 16px;
+
+			}
+
+		/**/
+
+		/* preview open-with menu */
+
+			.proteamedge_open_with_menu_element {
+
+				display: none;
+				user-select: none;
+
+			}
+
+			.proteamedge_open_with_menu_element.active {
+
+				display: block;
+
+			}
+
+			.proteamedge_open_with_menu_element:hover {
+
+				background-color: #dfdfdf;
+				border-color: #dfdfdf;
+
+			}
+
+			.proteamedge_open_with_menu_element>div {
+
+				background-position: left top;
+				background-repeat: no-repeat;
+				user-select: none;
+
+			}
+
+		/**/
+
+	/**/
+
+	/* proteamedge_pdf_sign_button */
+
+		#proteamedge_pdf_sign_button {
+
+			position: fixed;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			bottom: 200px;
+			right: 40px;
+			height: 36px;
+			width: 36px;
+
+			border-radius: 100%;
+			background-color: #f7ba07 !important;
+			box-shadow: rgba(0, 0, 0, 0.14) 0px 2px 2px 0px, rgba(0, 0, 0, 0.12) 0px 1px 5px 0px, rgba(0, 0, 0, 0.2) 0px 3px 1px -2px;
+
+			cursor: pointer;
+
+			transition-delay: 0.15s;
+			transition-duration: 0.25s;
+			transition-property: transform;
+
+		}
+
+		#proteamedge_pdf_sign_button.visible {
+
+			transform: translateX( 0px );
+			transition-timing-function: cubic-bezier( 0, 0, 0.2, 1 );
+
+		}
+
+		#proteamedge_pdf_sign_button.hidden {
+
+			transform: translateX( 132px );
+			transition-timing-function: cubic-bezier( 0.4, 0, 1, 1 );
+
+		}
+
+		#proteamedge_pdf_sign_button>img {
+
+			width: 24px;
+			height: 24px;
+
+			opacity: 0.75;
+
+		}
+
+	/**/
+
+	/* google drive contextmenu item */
+
+		.proteamedge_contextmenu_item {
+
+		}
+
+		.proteamedge_contextmenu_item:hover {
+
+			background-color: #ededed;
+
+		}
+
+	/**/
+
+	/* openwithmenu item */
+
+		.proteamedge_openwithmenu_item {
+
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+
+			cursor: pointer;
+			user-select: none;
+
+		}
+
+		.proteamedge_openwithmenu_item:hover {
+
+			background-color: #dfdfdf;
+
+		}
+
+		.proteamedge_openwithmenu_item_icon {
+
+			height: 20px;
+			width: 20px;
+			margin: 0px 16px;
+
+			background-position: left top;
+			background-repeat: no-repeat;
+			background-size: 100%;
+
+			user-select: none;
+
+		}
+
+	/**/
+
+	/* google docs */
+
+		.proteamedge_menu_item:hover {
+
+			background-color: #eee;
+
+		}
+
+	/**/
