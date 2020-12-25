@@ -1,13 +1,10 @@
 ( function () {
 
 	function send_iframe_message ( name, data ) {
-
 			document.querySelector( "#app_iframe" ).contentWindow.postMessage({ name, data }, "*" );
-
 			//PTE by moving this here, the waiting indicate is not removed until my page is loaded and message is sent to my window.
 			$( ".page" ).removeClass( "active" );
 			$( ".page.app_iframe" ).addClass( "active" );
-
 	};
 
 	//PTE waits for a condition, retries according to settings.
