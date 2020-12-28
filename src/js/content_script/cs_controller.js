@@ -346,8 +346,8 @@
 						_state.last_right_click_file_data = null;
 
 					};
-					//console.log(_state.last_right_click_file_data);
-					console.log('debug now');
+					/* console.log(_state.last_right_click_file_data);
+					console.log('debug now'); */
 				},
 
 				handle_gmail_open_with_menu: async ( element ) => {

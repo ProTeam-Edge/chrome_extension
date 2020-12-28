@@ -132,7 +132,7 @@
 				var item_id = x.util.doc_to_val([ item, ".l-u-Ab-zb-Ua", "attr", "src" ]).match( /\/d\/(.+)\=/ )[ 1 ];
 				var file_name = x.util.doc_to_val([ item, ".eAQ1W", "attr", "data-tooltip" ]);
 				var icon_src = x.util.doc_to_val([ item, ".a-Ua-c", "attr", "src" ]);
-				
+
 				var file_data = exec( "google_drive_converter", "tile_entry_data_to_file_data", {
 
 					item_id: item_id,
@@ -151,12 +151,11 @@
 				var file_name = tile_entry_data.file_name;
 				var icon_src = tile_entry_data.icon_src;
 				
-				/* console.log(item_id);
-				console.log(file_name);*/
-				console.log(icon_src); 
+				console.log(icon_src);
+				
 				
 				var auth_user_index = exec( "main_converter", "url_to_auth_user_index", document.location.href );
-				/* console.log(auth_user_index) */
+
 				var thumb_url = "https://lh3.google.com/u/" + auth_user_index + "/d/" + item_id + "=w300-k-iv1";
 
 				if (
@@ -164,7 +163,7 @@
 					icon_src && (
 
 						// new
-
+						
 						icon_src === "https://drive-thirdparty.googleusercontent.com/16/type/image/jpeg" || // jpeg file icon
 						icon_src === "https://drive-thirdparty.googleusercontent.com/16/type/image/jpg" || // jpg file icon
 						icon_src === "https://drive-thirdparty.googleusercontent.com/16/type/image/png" || // png file icon
@@ -184,6 +183,28 @@
 						icon_src === "https://drive-thirdparty.googleusercontent.com/16/type/text/html" || // html file icon
 						icon_src === "https://drive-thirdparty.googleusercontent.com/16/type/text/rtf" || // rtf file icon
 						icon_src === "https://drive-thirdparty.googleusercontent.com/16/type/text/richtext" || // richtext file icon
+						
+						
+						
+						icon_src === "https://drive-thirdparty.googleusercontent.com/32/type/image/jpeg" || // jpeg file icon
+						icon_src === "https://drive-thirdparty.googleusercontent.com/32/type/image/jpg" || // jpg file icon
+						icon_src === "https://drive-thirdparty.googleusercontent.com/32/type/image/png" || // png file icon
+						icon_src === "https://drive-thirdparty.googleusercontent.com/32/type/image/bmp" || // png file icon
+						icon_src === "https://drive-thirdparty.googleusercontent.com/32/type/image/tiff" || // png file icon
+						icon_src === "https://drive-thirdparty.googleusercontent.com/32/type/image/heic" || // png file icon
+						icon_src === "https://drive-thirdparty.googleusercontent.com/32/type/image/heif" || // png file icon
+						icon_src === "https://drive-thirdparty.googleusercontent.com/32/type/image/svg+xml" || // svg file icon
+
+						icon_src === "https://drive-thirdparty.googleusercontent.com/32/type/image/vnd.adobe.photoshop" || // psd file icon
+
+						icon_src === "https://drive-thirdparty.googleusercontent.com/32/type/application/zip" || // zip file icon
+						icon_src === "https://drive-thirdparty.googleusercontent.com/32/type/application/pdf" || // pdf file icon
+						icon_src === "https://drive-thirdparty.googleusercontent.com/32/type/application/vnd.openxmlformats-officedocument.wordprocessingml.document" || // word file icon
+
+						icon_src === "https://drive-thirdparty.googleusercontent.com/32/type/text/plain" || // text file icon
+						icon_src === "https://drive-thirdparty.googleusercontent.com/32/type/text/html" || // html file icon
+						icon_src === "https://drive-thirdparty.googleusercontent.com/32/type/text/rtf" || // rtf file icon
+						icon_src === "https://drive-thirdparty.googleusercontent.com/32/type/text/richtext" || // richtext file icon
 
 						// backwards compatibility
 
@@ -205,7 +226,7 @@
 						auth_user_index
 
 					};
-					
+
 					return file_data;
 
 				} else if (
@@ -213,7 +234,7 @@
 					// new
 
 					icon_src === "https://drive-thirdparty.googleusercontent.com/16/type/application/vnd.google-apps.document" ||
-
+					icon_src === "https://drive-thirdparty.googleusercontent.com/32/type/application/vnd.google-apps.document" ||
 					// legacy
 
 					icon_src === "//ssl.gstatic.com/docs/doclist/images/mediatype/icon_1_document_x16.png"
@@ -244,8 +265,9 @@
 					// new
 
 					icon_src === "https://drive-thirdparty.googleusercontent.com/16/type/application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" ||
+					icon_src === "https://drive-thirdparty.googleusercontent.com/32/type/application/vnd.google-apps.spreadsheet" ||
 					icon_src === "https://drive-thirdparty.googleusercontent.com/16/type/application/vnd.google-apps.spreadsheet" ||
-
+					icon_src === "https://drive-thirdparty.googleusercontent.com/32/type/application/vnd.google-apps.spreadsheet" ||
 					// legacy
 
 					icon_src === "//ssl.gstatic.com/docs/doclist/images/mediatype/icon_1_spreadsheet_x16.png"
@@ -273,7 +295,8 @@
 
 				} else if (
 
-					icon_src === "https://drive-thirdparty.googleusercontent.com/16/type/application/vnd.google-apps.presentation"
+					icon_src === "https://drive-thirdparty.googleusercontent.com/16/type/application/vnd.google-apps.presentation" || 
+					icon_src === "https://drive-thirdparty.googleusercontent.com/32/type/application/vnd.google-apps.presentation"
 
 				) { // pptx file icon
 
@@ -296,7 +319,7 @@
 
 					return file_data;
 
-				} else if ( icon_src.indexOf( "https://drive-thirdparty.googleusercontent.com/16/type/" ) === 0 ) {
+				} else if ( icon_src.indexOf( "https://drive-thirdparty.googleusercontent.com/16/type/" ) === 0 || icon_src.indexOf( "https://drive-thirdparty.googleusercontent.com/32/type/" ) === 0 ) {
 
 					var file_data = {
 
