@@ -345,7 +345,7 @@
 						_state.last_right_click_file_data = null;
 
 					};
-					console.log(_state);
+					console.log(_state.last_right_click_file_data);
 					console.log('debug now');
 				},
 
