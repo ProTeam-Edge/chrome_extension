@@ -132,7 +132,7 @@
 				var item_id = x.util.doc_to_val([ item, ".l-u-Ab-zb-Ua", "attr", "src" ]).match( /\/d\/(.+)\=/ )[ 1 ];
 				var file_name = x.util.doc_to_val([ item, ".eAQ1W", "attr", "data-tooltip" ]);
 				var icon_src = x.util.doc_to_val([ item, ".a-Ua-c", "attr", "src" ]);
-
+				
 				var file_data = exec( "google_drive_converter", "tile_entry_data_to_file_data", {
 
 					item_id: item_id,
@@ -150,8 +150,13 @@
 				var item_id = tile_entry_data.item_id;
 				var file_name = tile_entry_data.file_name;
 				var icon_src = tile_entry_data.icon_src;
+				
+				/* console.log(item_id);
+				console.log(file_name);
+				console.log(icon_src); */
+				
 				var auth_user_index = exec( "main_converter", "url_to_auth_user_index", document.location.href );
-
+				console.log(auth_user_index)
 				var thumb_url = "https://lh3.google.com/u/" + auth_user_index + "/d/" + item_id + "=w300-k-iv1";
 
 				if (

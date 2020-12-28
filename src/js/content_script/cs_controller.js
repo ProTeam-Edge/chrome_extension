@@ -323,7 +323,7 @@
 					var list_item = $( event.target ).closest( ".O5x1db.ACGwFc" ).closest( ".WYuW0e" );
 					var block_item = $( event.target ).closest( ".jGNTYb.ACGwFc" ).closest( ".WYuW0e" );
 					var quick_access_item = $( event.target ).closest( ".Ccie2c.a-HZnjzd-xb-QBLLGd" );
-
+					
 					exec( "log", "write_exec", "list_item", list_item.get( 0 ) );
 					exec( "log", "write_exec", "block_item", block_item.get( 0 ) );
 					exec( "log", "write_exec", "quick_access_item", quick_access_item.get( 0 ) );
@@ -337,15 +337,16 @@
 						_state.last_right_click_file_data = exec( "google_drive_converter", "block_item_to_file_data", block_item.get( 0 ) );
 
 					} else if ( quick_access_item.get( 0 ) ) {
-
+						
 						_state.last_right_click_file_data = exec( "google_drive_converter", "quick_access_item_to_file_data", quick_access_item.get( 0 ) );
+				
 
 					} else {
 
 						_state.last_right_click_file_data = null;
 
 					};
-					console.log(_state.last_right_click_file_data);
+					//console.log(_state.last_right_click_file_data);
 					console.log('debug now');
 				},
 
