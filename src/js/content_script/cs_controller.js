@@ -762,7 +762,7 @@
 
 								if ( attachment_data.buttons_amount >= 3 ) {
 
-									button.css( "margin", "4px 8px 0px 0px" );
+									button.css( "margin", "0px 8px 0px 0px" );
 
 								};
 
