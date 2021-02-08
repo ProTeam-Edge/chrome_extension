@@ -1,10 +1,7 @@
 ( function () {
 
 	function send_iframe_message ( name, data ) {
-			console.log(name)
-			console.log('name')
-			console.log(data)
-			console.log('data')
+		
 			document.querySelector( "#app_iframe" ).contentWindow.postMessage({ name, data }, "*" );
 			//PTE by moving this here, the waiting indicate is not removed until my page is loaded and message is sent to my window.
 			$( ".page" ).removeClass( "active" );
