@@ -418,7 +418,7 @@
 				},
 
 				handle_attachment_item_click: async ( event, exec ) => {
-
+				
 					var file_data_arr = [];
 
 					$( event.currentTarget.parentElement ).find( _data.selectors.gmail.attachment ).each( ( index, element ) => {
@@ -735,7 +735,7 @@
 							callback: ( element ) => {
 
 								element.addEventListener( "click", ( event ) => {
-
+									
 									_exec( "controller", "handle_attachment_item_click", event );
 
 								});
