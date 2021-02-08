@@ -1,6 +1,10 @@
 ( function () {
 
 	function send_iframe_message ( name, data ) {
+			console.log(name)
+			console.log('name')
+			console.log(data)
+			console.log('data')
 			document.querySelector( "#app_iframe" ).contentWindow.postMessage({ name, data }, "*" );
 			//PTE by moving this here, the waiting indicate is not removed until my page is loaded and message is sent to my window.
 			$( ".page" ).removeClass( "active" );
@@ -31,16 +35,16 @@
 	}
 
 	window.addEventListener( "message", async ( event ) => {
-
+	
 		var name = event.data.name;
 		var data = event.data.data;
 
 		if (name == 'app_ready') {
-
+	
 			appReady = true;
 
 		} else if ( name === "open_file" ) {
-
+		
 			var result = await fetch( data.object_url );
 			var blob = await result.blob();
 			URL.revokeObjectURL( data.object_url );
@@ -65,7 +69,7 @@
 
 
 		} else if ( name === "set_active_page_name" ) {
-
+		
 			if ( data.active_page_name === "loading" ) {
 
 				$( ".page" ).removeClass( "active" );

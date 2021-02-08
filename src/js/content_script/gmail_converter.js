@@ -20,7 +20,9 @@
 				$(  selectors.attachment_container, document ).each( ( index, element ) => {
 
 					var file_data = exec( "gmail_converter", "attachment_element_to_file_data", element );
-
+					console.log(file_data);
+					console.log('file_data');
+					
 					if ( file_data && file_data.type !== "unknown" ) {
 
 						file_data_arr.push( file_data );

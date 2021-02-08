@@ -453,7 +453,7 @@
 				},
 
 				handle_gmail_openwithmenu_item_click: async ( event, exec ) => {
-
+				console.log('reached gmail')
 					await exec( "controller", "make_sure_overlay_is_injected" );
 
 					exec( "controller", "send_iframe_message", "set_active_page_name", { active_page_name: "loading" } );
