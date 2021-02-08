@@ -346,8 +346,8 @@
 						_state.last_right_click_file_data = null;
 
 					};
-					//console.log(_state.last_right_click_file_data);
-					console.log('debug now');
+					/* console.log(_state.last_right_click_file_data);
+					console.log('debug now'); */
 				},
 
 				handle_gmail_open_with_menu: async ( element ) => {
@@ -418,7 +418,7 @@
 				},
 
 				handle_attachment_item_click: async ( event, exec ) => {
-
+				
 					var file_data_arr = [];
 
 					$( event.currentTarget.parentElement ).find( _data.selectors.gmail.attachment ).each( ( index, element ) => {
@@ -735,7 +735,7 @@
 							callback: ( element ) => {
 
 								element.addEventListener( "click", ( event ) => {
-
+									
 									_exec( "controller", "handle_attachment_item_click", event );
 
 								});
@@ -762,7 +762,7 @@
 
 								if ( attachment_data.buttons_amount >= 3 ) {
 
-									button.css( "margin", "4px 8px 0px 0px" );
+									button.css( "margin", "0px 8px 0px 0px" );
 
 								};
 
