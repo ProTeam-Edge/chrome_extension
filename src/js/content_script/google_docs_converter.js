@@ -1,6 +1,6 @@
 
 	function google_docs_converter () {
-
+		console.log('reached docs')
 		return {
 
 			document_to_file_data ( document, conv ) {
