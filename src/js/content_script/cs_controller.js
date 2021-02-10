@@ -365,7 +365,7 @@
 				},
 
 				handle_drive_open_with_menu: async ( element ) => {
-
+					console.log('handle_drive_open_with_menu reached')	
 					$( element ).find( `[role="menuitem"]` ).first().before( `
 
 						<div class="a-b-v proteamedge_openwithmenu_item proteamedge_google_drive_openwithmenu_item" role="menuitem" style="user-select: none;" id=":ag">
