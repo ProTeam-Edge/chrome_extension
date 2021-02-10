@@ -1,18 +1,18 @@
 
 	function google_docs_converter () {
-		console.log('reached docs')
+		alert("google docs converter if")
 		return {
 
 			document_to_file_data ( document, conv ) {
 
 				if ( document.location.href.indexOf( "https://docs.google.com/document" ) === 0 ) {
-
+					alert("google docs converter document found if")
 					var match = document.location.pathname.match( /^\/document\/d\/(.+?)\// );
 					var main_page_url = $( "#docs-branding-container>a" ).attr( "href" );
 					var auth_user_index = conv( "main", "url", "auth_user_index", main_page_url );
 
 					if ( match ) {
-
+						alert("google docs converter document match")
 						return {
 
 							type: "normal",
@@ -31,17 +31,17 @@
 						};
 
 					} else {
-
+						alert("google docs converter document found first else")
 						return null;
 
 					};
 
 				} else if ( document.location.href.indexOf( "https://docs.google.com/spreadsheets" ) === 0 ) {
-
+					alert("google docs converter spreadsheet found else if")
 					var match = document.location.pathname.match( /^\/spreadsheets\/d\/(.+?)\// );
 
 					if ( match ) {
-
+						alert("google docs converter spreadsheet found if")
 						return {
 
 							type: "normal",
@@ -60,13 +60,13 @@
 						};
 
 					} else {
-
+						alert("google docs converter spreadsheet found else")
 						return null;
 
 					};
 
 				} else {
-
+					alert("google docs converter spreadsheet found first else")
 					return null;
 
 				};
