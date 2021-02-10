@@ -693,22 +693,22 @@
 
 					// Google Drive - detect open with menu
 
-						// _app.x.detect({
+						 _app.x.detect({
 
-						// 	method: "normal",
-						// 	selector: ".a-b-w.a-b-w-Xi.a-b-lc.a-b-L",
-						// 	callback: ( element ) => {
+						 	method: "normal",
+							selector: ".a-b-w.a-b-w-Xi.a-b-lc.a-b-L",
+							callback: ( element ) => {
 
-						// 		_exec( "controller", "handle_drive_open_with_menu", element );
+								_exec( "controller", "handle_drive_open_with_menu", element );
 
-						// 	},
+							},
 
-						// });
+						 });
 
 					// Gmail - detect open with menu
 
 						 _app.x.detect({
-
+	
 						 	method: "normal",
 							selector: ".aLF-aPX-M.aLF-aPX-M-ayU.aLF-aPX-aPH.aLF-aPX-bhP",
 						 	callback: ( element ) => {
