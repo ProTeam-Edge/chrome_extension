@@ -23,6 +23,7 @@
 			gmail_converter: gmail_converter(),
 			main_converter: main_converter(),
 
+
 			controller: controller(),
 
 		};
@@ -41,6 +42,7 @@
 			app.exec.add_module( "google_drive_converter", app.google_drive_converter );
 			app.exec.add_module( "gmail_converter", app.gmail_converter );
 			app.exec.add_module( "main_converter", app.main_converter );
+			app.exec.add_module( "google_docs_converter", app.google_docs_converter );
 
 			app.exec.add_module( "controller", app.controller );
 

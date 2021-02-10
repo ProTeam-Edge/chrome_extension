@@ -708,23 +708,23 @@
 
 					// Gmail - detect open with menu
 
-						// _app.x.detect({
+						 _app.x.detect({
 
-						// 	method: "normal",
-						// 	selector: ".aLF-aPX-M.aLF-aPX-M-ayU.aLF-aPX-aPH.aLF-aPX-bhP",
-						// 	callback: ( element ) => {
+						 	method: "normal",
+							selector: ".aLF-aPX-M.aLF-aPX-M-ayU.aLF-aPX-aPH.aLF-aPX-bhP",
+						 	callback: ( element ) => {
 
-						// 		// ignore open with menu that was opened with a top-right menu button
+								// ignore open with menu that was opened with a top-right menu button
 
-						// 		if ( element.querySelector( ".aLF-aPX-JX.aLF-aPX-N-JX.aLF-aPX-aXi-I.aLF-aPX-Mw-I-JX" ) === null ) {
+							if ( element.querySelector( ".aLF-aPX-JX.aLF-aPX-N-JX.aLF-aPX-aXi-I.aLF-aPX-Mw-I-JX" ) === null ) {
 
-						// 			_exec( "controller", "handle_gmail_open_with_menu", element );
+									_exec( "controller", "handle_gmail_open_with_menu", element );
 
-						// 		};
+						 		};
 
-						// 	},
+						 	},
 
-						// });
+						 });
 
 					// Gmail - observe attachment item clicks
 
