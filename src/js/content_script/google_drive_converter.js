@@ -151,7 +151,7 @@
 				var file_name = tile_entry_data.file_name;
 				var icon_src = tile_entry_data.icon_src;
 				
-				console.log(icon_src);
+				
 				
 				
 				var auth_user_index = exec( "main_converter", "url_to_auth_user_index", document.location.href );

@@ -346,12 +346,11 @@
 						_state.last_right_click_file_data = null;
 
 					};
-					/* console.log(_state.last_right_click_file_data);
-					console.log('debug now'); */
+					
 				},
 
 				handle_gmail_open_with_menu: async ( element ) => {
-				console.log('handle_gmail_open_with_menu reached')
+			
 					$( element ).find( `[role="menuitem"]` ).first().before( `
 
 						<div class="aLF-aPX-N proteamedge_openwithmenu_item proteamedge_gmail_openwithmenu_item" role="menuitem" style="user-select: none;">
@@ -453,7 +452,7 @@
 				},
 
 				handle_gmail_openwithmenu_item_click: async ( event, exec ) => {
-				console.log('reached gmail')
+				
 					await exec( "controller", "make_sure_overlay_is_injected" );
 
 					exec( "controller", "send_iframe_message", "set_active_page_name", { active_page_name: "loading" } );
@@ -753,18 +752,19 @@
 							callback: ( element ) => {
 
 								var attachment_data = _exec( "gmail_converter", "attachment_icons_container_to_attachment_element_data", element );
-								console.log('attachment_data')
-								console.log(attachment_data)
+							
 								var button = $( `
 									<div class = "proteamedge_attachment_button T-I J-J5-Ji aQv T-I-ax7 L3" data-tooltip = "ProTeam Edge" >
 										<img src = "` + chrome.extension.getURL( "/img/logo_white.svg" ) + `" >
 									</div>
 								` );
 
-								if ( attachment_data.buttons_amount >= 3 ) {
+								if ( attachment_data.buttons_amount > 3 ) {
 
 									button.css( "margin", "5px 8px 0px 0px" );
 
+								} else {
+									button.css( "margin", "0px 8px 0px 0px" );
 								};
 
 								$( element ).append( button );

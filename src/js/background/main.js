@@ -30,7 +30,7 @@
 		app.chrome.init( app );
 
 		// add exec modules
-
+			
 			app.exec.add_module( "log", app.log );
 			app.exec.add_module( "state", app.state );
 			app.exec.add_module( "chrome", app.chrome );
