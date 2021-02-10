@@ -25,7 +25,7 @@
 
 				};
 
-			},
+			}, 
 
 			initial_data_to_download_url ( initial_data ) {
 
