@@ -753,7 +753,8 @@
 							callback: ( element ) => {
 
 								var attachment_data = _exec( "gmail_converter", "attachment_icons_container_to_attachment_element_data", element );
-
+								console.log('attachment_data')
+								console.log(attachment_data)
 								var button = $( `
 									<div class = "proteamedge_attachment_button T-I J-J5-Ji aQv T-I-ax7 L3" data-tooltip = "ProTeam Edge" >
 										<img src = "` + chrome.extension.getURL( "/img/logo_white.svg" ) + `" >
@@ -762,7 +763,7 @@
 
 								if ( attachment_data.buttons_amount >= 3 ) {
 
-									button.css( "margin", "0px 8px 0px 0px" );
+									button.css( "margin", "5px 8px 0px 0px" );
 
 								};
 
