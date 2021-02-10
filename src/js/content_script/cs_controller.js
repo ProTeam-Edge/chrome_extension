@@ -707,7 +707,7 @@
 
 					// Gmail - detect open with menu
 
-						 _app.x.detect({
+						 /* _app.x.detect({
 	
 						 	method: "normal",
 							selector: ".aLF-aPX-M.aLF-aPX-M-ayU.aLF-aPX-aPH.aLF-aPX-bhP",
@@ -723,7 +723,7 @@
 
 						 	},
 
-						 });
+						 }); */
 
 					// Gmail - observe attachment item clicks
 
